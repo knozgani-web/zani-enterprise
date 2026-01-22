@@ -1,0 +1,529 @@
+/* ===============================
+   Global Styles
+   =============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #f2f4f8;
+    color: #111827; /* default text */
+}
+
+/* ===============================
+   Navigation Bar
+   =============================== */
+
+.nav-bar {
+    background: #020617;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+}
+
+/* ===============================
+   Hero Section (Home Page)
+   =============================== */
+
+.hero {
+    background: #0f172a;
+    color: white;
+    padding: 120px 20px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.hero-text p {
+    margin-top: 20px;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* ===============================
+   About Section
+   =============================== */
+
+.about {
+    background: #2563eb;
+    color: white;
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 30px;
+}
+
+.about p {
+    margin-top: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* ===============================
+   Contact Page
+   =============================== */
+
+.contact-page {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.contact-page h1 {
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.contact-page p {
+    color: #111827;
+    margin-bottom: 40px;
+}
+
+.contact-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.contact-item {
+    background: #f9fafb;
+    padding: 24px;
+    border-radius: 14px;
+}
+
+.contact-item h3 {
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.contact-item p {
+    color: #111827;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ===============================
+   Services Overview Page
+   =============================== */
+
+.services-page {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.services-intro {
+    color: #111827;
+    margin-bottom: 50px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Individual Service Cards */
+.service-card {
+    background: #f9fafb;
+    border-radius: 18px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+}
+
+.service-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 16px;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover img {
+    transform: scale(1.03);
+}
+
+.service-card h3 {
+    color: #0f172a;
+    padding: 20px 20px 8px;
+    font-size: 20px;
+}
+
+.service-card p {
+    color: #111827;
+    font-size: 16px;
+    padding: 0 20px 16px;
+    line-height: 1.8;
+    margin-bottom: 14px;
+}
+
+.service-card a {
+    display: inline-block;
+    margin: 0 20px 20px;
+    color: #38bdf8;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.service-card a:hover {
+    text-decoration: underline;
+}
+
+/* ===============================
+   Individual Service Pages (Design, Consulting, Transport)
+   =============================== */
+
+.service-detail {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 30px;
+    color: #111827;
+}
+
+/* Hero Section */
+.service-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 80px;
+    background: #f9fafb;
+    padding: 40px 30px;
+    border-radius: 20px;
+}
+
+.service-hero-text h1 {
+    color: #0f172a;
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.service-hero-text p {
+    color: #111827;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.service-hero-image img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* Buttons */
+.primary-btn {
+    display: inline-block;
+    background: #38bdf8;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.primary-btn:hover {
+    background: #0ea5e9;
+}
+
+/* Service sections */
+.service-section {
+    margin-bottom: 70px;
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 40px 20px;
+}
+
+.service-section h2 {
+    color: #0f172a;
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+.service-section p,
+.service-section li {
+    color: #111827;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.service-section ul {
+    padding-left: 20px;
+}
+
+/* Call to Action */
+.service-cta {
+    text-align: center;
+    background: #f9fafb;
+    padding: 60px 30px;
+    border-radius: 24px;
+    margin-bottom: 60px;
+}
+
+.service-cta h2 {
+    color: #0f172a;
+    margin-bottom: 12px;
+    font-size: 28px;
+}
+
+.service-cta p {
+    color: #111827;
+    margin-bottom: 24px;
+    font-size: 16px;
+}
+
+/* ===============================
+   Footer
+   =============================== */
+
+.site-footer {
+    background: #020617;
+    margin-top: 80px;
+    padding-top: 50px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.footer-brand h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+    color: #cbd5f5;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    color: white;
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    display: block;
+    color: #cbd5f5;
+    text-decoration: none;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-contact p {
+    color: #cbd5f5;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-bottom {
+    border-top: 1px solid #1e293b;
+    margin-top: 40px;
+    padding: 20px 30px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+/* ===============================
+   Mobile Styles
+   =============================== */
+
+@media (max-width: 768px) {
+
+    /* Hero */
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .hero-image {
+        margin-top: 40px;
+    }
+
+    /* About */
+    .about {
+        padding: 70px 20px;
+    }
+
+    .about h2 {
+        font-size: 26px;
+    }
+
+    .about p {
+        font-size: 15px;
+    }
+
+    /* Services grid */
+    .services-page {
+        padding: 0 16px;
+        text-align: left;
+        margin-top: 40px;
+    }
+
+    .services-intro {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .services-grid {
+        display: block;
+        gap: 40px;
+    }
+
+    .service-card {
+        padding-bottom: 10px;
+        margin-bottom: 50px;
+        border-radius: 14px;
+    }
+
+    .service-card h3 {
+        font-size: 18px;
+        padding: 10px 0 6px;
+    }
+
+    .service-card p {
+        font-size: 16px;
+        line-height: 1.8;
+        padding: 0;
+        margin-bottom: 14px;
+    }
+
+    .service-card img {
+        height: 200px;
+    }
+
+    /* Individual service page */
+    .service-hero {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .service-hero-text h1 {
+        font-size: 28px;
+    }
+
+    .service-detail {
+        padding: 0 16px;
+    }
+
+    .service-section {
+        padding: 30px 16px;
+    }
+
+    .service-cta h2 {
+        font-size: 22px;
+    }
+
+    .service-cta p {
+        font-size: 15px;
+    }
+
+    /* Navigation */
+    .nav-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links a {
+        margin-left: 0;
+        margin-right: 16px;
+        font-size: 13px;
+    }
+
+    /* Contact */
+    .contact-details {
+        grid-template-columns: 1fr;
+    }
+
+}
+
