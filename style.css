@@ -394,6 +394,19 @@ body {
     line-height: 1.6;
 }
 
+.footer-contact p {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+.footer-contact a {
+    color: #cbd5f5;
+    text-decoration: none;
+}
+.footer-contact a:hover {
+text-decoration: underline;
+}
+
 .footer-bottom {
     border-top: 1px solid #1e293b;
     margin-top: 40px;
