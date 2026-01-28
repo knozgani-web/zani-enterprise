@@ -10,8 +10,27 @@
 }
 
 body {
+    line-height: 1.8;
     background: #f2f4f8;
     color: #111827; /* default text */
+}
+
+p {
+  margin-bottom: 1.2rem;
+}
+
+.about .content {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+h1, h2 {
+  margin-bottom: 1rem;
+}
+
+h1, h2 {
+  margin-top: 2rem;
 }
 
 /* ===============================
@@ -94,7 +113,7 @@ body {
    =============================== */
 
 .about {
-    background: #2563eb;
+    background: #1f2d49;
     color: white;
     padding: 90px 20px;
     text-align: center;
@@ -540,3 +559,8 @@ text-decoration: underline;
 
 }
 
+@media (max-width: 768px) {
+  .about .content {
+    padding: 1.25rem;
+  }
+}
