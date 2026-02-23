@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Zani Enterprise</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav-bar">
+    <div class="nav-container">
+        <div class="nav-logo">Zani Enterprise</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+        </div>
+    </div>
+</nav>
+
+<section class="login-page">
+    <h1>Member Login</h1>
+    <p>Log in to access additional service features.</p>
+
+    <form class="login-form" onsubmit="login(event)">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Log in</button>
+    </form>
+</section>
+
+<body class="login-page"></body>
+<script>
+function login(e) {
+    e.preventDefault();
+
+    const user = document.getElementById('username').value;
+    const pass = document.getElementById('password').value;
+
+    if (user === "client" && pass === "zani123") {
+        localStorage.setItem("zaniLoggedIn", "true");
+        window.location.href = "services.html";
+    } else {
+        alert("Invalid credentials");
+    }
+}
+</script>
+
+</body>
+</html>

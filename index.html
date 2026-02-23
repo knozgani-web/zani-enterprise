@@ -17,6 +17,8 @@
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
             <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+            <a href="login.html">Login</a>
         </nav>
     </div>
 </header>
@@ -37,24 +39,21 @@
     </div>
 </section>
 
-<section class="about">
-    <h2>About us</h2>
-    <div class="content">
-        <p>
-        Zani Enterprise is a growing, multi service business built on a simple idea: provide practical, reliable solutions that make life and work easier for our clients. We operate across several service areas, bringing together creativity, strategy, and logistics under one brand.</p>
+<p class="welcome-msg" style="display:none;">
+    Welcome back. You now have access to additional service options.
+</p>
+<script>
+if (localStorage.getItem("zaniLoggedIn") === "true") {
+    document.querySelector(".welcome-msg")?.style.display = "block";
+}
+</script>
 
-<p>Our work is driven by a strong understanding that every client’s needs are different. Whether you are an individual, a small business, or a larger organisation, we take the time to listen first before offering solutions that are tailored, realistic, and effective. We believe good service starts with clarity, honesty, and attention to detail.</p>
+<span class="member-badge">Members only</span>
 
-<p>At Zani Enterprise, we place a strong emphasis on quality and consistency. From design and consulting to transport services, we aim to maintain the same professional standard across everything we do. Our approach combines modern tools with practical experience, allowing us to deliver results that are both creative and functional.</p>
-
-<p>We are also committed to growth and improvement. As a business, we continue to learn, adapt, and expand our services in response to changing client needs and industry trends. This flexibility allows us to remain relevant and dependable in a fast changing environment.
-
-Most importantly, we value trust. We understand that choosing a service provider is an important decision, and we work hard to earn and maintain the confidence of those we serve. Our goal is not just to complete a task, but to build lasting working relationships based on mutual respect and results.</p>
-
-<p>Zani Enterprise is more than a service provider. It is a partner you can rely on to deliver with purpose, professionalism, and care.</p>
-
-    </p>
-</div>
+<section class="home-showcase">
+    <img src="images/design.jpg" alt="Design services">
+    <img src="images/consulting.jpg" alt="Consulting services">
+    <img src="images/transport.jpg" alt="Transport services">
 </section>
 
 <footer class="site-footer">

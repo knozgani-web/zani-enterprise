@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome | Zani Enterprise</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav-bar">
+    <div class="nav-container">
+        <div class="nav-logo">Zani Enterprise</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="services.html" id="servicesTab" style="display:none;">Services</a>
+            <a href="#" id="logoutLink">Logout</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Welcome Section -->
+<section class="welcome-section">
+    <div class="welcome-overlay">
+        <h1 class="welcome-message">Welcome to Zani Enterprise!</h1>
+        <p class="welcome-subtext">You now have access to our full range of services.</p>
+    </div>
+</section>
+
+<!-- Animated Content -->
+<section class="welcome-content">
+    <div class="content-block">
+        <h2>Design, Consulting, Transport</h2>
+        <p>Explore the services that power your business forward. Scroll down to continue.</p>
+    </div>
+    <div class="content-block">
+        <h2>Professional and Reliable</h2>
+        <p>Our team ensures every project is handled with expertise and care.</p>
+    </div>
+    <div class="content-block">
+        <h2>Get Started</h2>
+        <button class="primary-btn" onclick="goToServices()">Go to Services</button>
+    </div>
+</section>
+
+<script>
+// Check login status
+if (localStorage.getItem("zaniLoggedIn") !== "true") {
+    window.location.href = "login.html";
+}
+
+// Show services tab in nav
+document.getElementById("servicesTab").style.display = "inline";
+
+// Logout link
+document.getElementById("logoutLink").addEventListener("click", () => {
+    localStorage.removeItem("zaniLoggedIn");
+    window.location.href = "index.html";
+});
+
+// Auto-hide welcome message after 3 seconds
+setTimeout(() => {
+    document.querySelector(".welcome-overlay").style.opacity = 0;
+}, 3000);
+
+// Scroll animations
+const blocks = document.querySelectorAll(".content-block");
+window.addEventListener("scroll", () => {
+    blocks.forEach(block => {
+        const top = block.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (top < windowHeight - 100) {
+            block.classList.add("fade-in");
+        }
+    });
+});
+
+// Go to Services button
+function goToServices() {
+    window.location.href = "services.html";
+}
+</script>
+
+</body>
+</html>

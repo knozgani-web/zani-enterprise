@@ -17,6 +17,8 @@
             <a href="../index.html">Home</a>
             <a href="../services.html">Services</a>
             <a href="../contact.html">Contact</a>
+            <a href="../about.html">About</a>
+            <a href="../login.html">Login</a>
         </nav>
     </div>
 </header>
@@ -67,6 +69,11 @@
     </p>
 </section>
 
+<div class="member-only">
+    <a href="contact.html" class="primary-btn">Request this service</a>
+</div>
+
+
 <footer class="site-footer">
     <div class="footer-container">
 
@@ -106,6 +113,14 @@
         <p>© 2026 Zani Enterprise. All rights reserved.</p>
     </div>
 </footer>
+
+<script>
+if (localStorage.getItem("zaniLoggedIn") !== "true") {
+    document.querySelectorAll(".member-only").forEach(el => {
+        el.style.display = "none";
+    });
+}
+</script>
 
 </body>
 </html>
